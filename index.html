@@ -28,16 +28,16 @@
   <main>
     <section class="downloads">
       <h2 class="visually-hidden">Скачать приложение</h2>
-      <button class="downloads__button" type="button">Скачать приложение</button>
+      <a class="downloads__button" href="#">Скачать приложение</a>
       <ul class="downloads__list">
-        <li class="downloads__item">
-          <a class="downloads__item--ios">iOS</a>
+        <li class="downloads__item downloads__item--ios">
+          <a href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">iOS</a>
         </li>
-        <li class="downloads__item">
-          <a class="downloads__item--android">Android</a>
+        <li class="downloads__item downloads__item--android">
+          <a href="https://play.google.com/store?hl=ru">Android</a>
         </li>
-        <li class="downloads__item">
-          <a class="downloads__item--winows">Windows</a>
+        <li class="downloads__item downloads__item--winows">
+          <a href="https://www.microsoft.com/ru-ru/store/b/home">Windows</a>
         </li>
       </ul>
       <p class="downloads__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -69,86 +69,113 @@
     </section>
 
     <section class="reviews">
-      <h2 class="reviews__title">Отзывы</h2>
-      <div class="reviews__list slider__list">
-        <blockquote class="reviews__item slider__item slider__item--active">
-          <cite class="reviews__author-name">Николай Петров</cite>
-          <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился с будущей женой в комментариях к выложенной фотографии</p>
-        </blockquote>
-        <blockquote class="reviews__item slider__item">
-          <cite class="reviews__author-name">Джон Смит</cite>
-          <p class="reviews__text">Отличную стрижку мне сделали ребята.</p>
-        </blockquote>
-        <blockquote class="reviews__item slider__item">
-          <cite class="reviews__author-name">Иван Бородайло</cite>
-          <p class="reviews__text">В Бородинском ваша борода в надёжных руках!</p>
-        </blockquote>
+      <div class="slider">
+        <h2 class="reviews__title">Отзывы</h2>
+        <div class="reviews__list slider__items">
+          <blockquote class="slider__item slider__item--active">
+            <cite class="reviews__author-name">Николай Петров</cite>
+            <p class="reviews__text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился с будущей женой в комментариях к выложенной фотографии</p>
+          </blockquote>
+          <blockquote class="slider__item">
+            <cite class="reviews__author-name">Константин Ивлев</cite>
+            <p class="reviews__text">Раскрасьте мир по своему!</p>
+          </blockquote>
+          <blockquote class="slider__item">
+            <cite class="reviews__author-name">Катя Шустрая</cite>
+            <p class="reviews__text">Отличное приложение, вступайте в наши ряды!</p>
+          </blockquote>
+        </div>
+        <p class="reviews__toggles slider__toggles">
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
       </div>
-      <p class="reviews__toggles slider__toggles">
-        <button class="slider__toggle" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
-      </p>
-
     </section>
 
     <section class="tariff-rates">
-      <h2 class="visually-hidden">Тарифные планы</h2>
-      <table class="tariff-rate__content">
-        <tr>
-          <th>
-            База
-            1,99 USD
-          </th>
-          <th class="tariff-rate--hit">
-            Стандарт
-            3,99 USD
-          </th>
-          <th>
-            Анлим
-            9,99 USD
-          </th>
-        </tr>
-        <tr>
-          <td>Розовый фильтр<span class="checked"></span></td>
-          <td>Розовый фильтр<span class="checked"></span></td>
-          <td>Розовый фильтр<span class="checked"></span></td>
-        </tr>
-        <tr>
-          <td>Смайлики<span class="unchecked"></span></td>
-          <td>Смайлики<span class="checked"></span></td>
-          <td>Смайлики<span class="checked"></span></td>
-        </tr>
-        <tr>
-          <td>Комментарии<span class="unchecked"></span></td>
-          <td>Комментарии<span class="unchecked"></span></td>
-          <td>Комментарии<span class="checked"></span></td>
-        </tr>
-      </table>
+      <div class="slider">
+        <h2 class="visually-hidden">Тарифные планы</h2>
+        <table class="tariff-rate__content">
+          <tr>
+            <th>
+              База
+              1,99 USD
+            </th>
+            <th class="tariff-rate tariff-rate--hit">
+              Стандарт
+              3,99 USD
+            </th>
+            <th>
+              Анлим
+              9,99 USD
+            </th>
+          </tr>
+          <tr>
+            <td>Розовый фильтр<span class="checked"></span></td>
+            <td>Розовый фильтр<span class="checked"></span></td>
+            <td>Розовый фильтр<span class="checked"></span></td>
+          </tr>
+          <tr>
+            <td>Смайлики<span class="unchecked"></span></td>
+            <td>Смайлики<span class="checked"></span></td>
+            <td>Смайлики<span class="checked"></span></td>
+          </tr>
+          <tr>
+            <td>Комментарии<span class="unchecked"></span></td>
+            <td>Комментарии<span class="unchecked"></span></td>
+            <td>Комментарии<span class="checked"></span></td>
+          </tr>
+        </table>
 
-      <p class="tariff-rates__toggles slider__toggles">
-        <button class="slider__toggle" type="button">1</button>
-        <button class="slider__toggle" type="button">2</button>
-        <button class="slider__toggle" type="button">3</button>
-      </p>
+        <p class="tariff-rates__toggles slider__toggles">
+          <button class="slider__toggle" type="button">1</button>
+          <button class="slider__toggle" type="button">2</button>
+          <button class="slider__toggle" type="button">3</button>
+        </p>
+      </div>
     </section>
   </main>
-  <footer class="page-footer">
+
+  <section class="contacts">
     <h2>Остались вопросы? Свяжитесь с нами!</h2>
-    <div class="page-footer__contacts contacts">
-      <div class="contact-item">
-        <p class="contact-item__title">Звоните:</p>
-        <p class="contact-item__text">+7 (812) 555-66-66</p>
-      </div>
-      <div class="contact-item">
-        <p class="contact-item__title">Пишите:</p>
-        <p class="contact-item__text">mail@htmlacademy.ru</p>
-      </div>
-      <div class="contact-item">
-        <p class="contact-item__title">Приезжайте в гости:</p>
-        <p class="contact-item__text">ул. Большая Конюшенная, 19/8</p>
-      </div>
-      <img class="contacts__map" src="http://placehold.it/150x100" alt="Карта">
+    <div class="contact-item">
+      <p class="contact-item__title">Звоните:</p>
+      <p class="contact-item__text">+7 (812) 555-66-66</p>
+    </div>
+    <div class="contact-item">
+      <p class="contact-item__title">Пишите:</p>
+      <p class="contact-item__text">mail@htmlacademy.ru</p>
+    </div>
+    <div class="contact-item">
+      <p class="contact-item__title">Приезжайте в гости:</p>
+      <p class="contact-item__text">ул. Большая Конюшенная, 19/8</p>
+    </div>
+
+    <div class="map">
+      <img class="map__image" src="http://placehold.it/150x100" alt="Карта">
+    </div>
+
+  </section>
+
+  <footer class="page-footer">
+    <img class="page-footer__logo" src="http://placehold.it/150x100" alt="Pink">
+    <div class="page-footer__social social">
+      <ul class="social__list">
+        <li class="social__item">
+          <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">Мы в Twitter</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy">Мы в YouTube</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано</b>
+      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
     </div>
   </footer>
 </body>
