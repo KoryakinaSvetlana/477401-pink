@@ -1,0 +1,59 @@
+﻿.tariff-rate {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+.tariff-rate__th {
+  padding: 20px 25px;
+  font-family: @font-family-name;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  border: 1px solid @bg-color-white;
+  background-color: @bg-menu-color-darkgray;
+  color: @font-color-white;
+
+  span {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.tariff-rate__th--hit {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 0px;
+    left: 0;
+    background-image: url("../img/bg-hit-tablet.svg");
+    background-position: left top;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: "Хит";
+    position: absolute;
+    width: 61px;
+    height: 61px;
+    top: 0px;
+    left: 0;
+    font-size: 14px;
+    line-height: 30px;
+    color: @font-color-white;
+    text-transform: uppercase;
+    font-weight: 800;
+    transform: rotate(-45deg);
+  }
+}
+
+.tariff-rate {
+  td {
+    padding: 20px 25px;
+    background-color: @bg-color-white;
+    border: 1px solid @border-color-lightgray;
+  }
+}

@@ -1,0 +1,36 @@
+﻿.reviews {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: @bg-color-white;
+
+  &::before {
+    content: "";
+    background-image: url("../img/bg-triangle-white.svg");
+    position: absolute;
+    height: 94px;
+    width: 1200px;
+    bottom: -94px;
+  }
+}
+
+.reviews__list {
+  padding: 45px 20px 35px 20px;
+}
+
+.reviews__author-name {
+  font-family: @font-family-name;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  color: @font-color-black;
+}
+
+.reviews__text {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: @font-color-gray;
+}

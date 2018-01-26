@@ -1,0 +1,30 @@
+﻿.button {
+  border-radius: 35px;
+  font-family: @font-family-name;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: 15px 15px;
+  width: 280px;
+  box-sizing: border-box;
+  background-color: transparent;
+
+  &--green {
+    border-radius: 2px;
+    background-color: @bg-color-green;
+    border: none;
+    text-transform: uppercase;
+    color: @font-color-white;
+  }
+
+  &--enabled {
+    color: @font-color-red;
+    border: 3px solid #d22856;
+  }
+
+  &--desabled {
+    color: @font-color-gray;
+    border: 3px solid #283645;
+    opacity: 0.1;
+  }
+}
