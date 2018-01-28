@@ -1,6 +1,12 @@
 .tariff-rate {
   border-collapse: collapse;
-  border-spacing: 0px;
+  border-spacing: 0;
+
+  td {
+    padding: 20px 25px;
+    background-color: @bg-color-white;
+    border: 1px solid @border-color-lightgray;
+  }
 }
 
 .tariff-rate__th {
@@ -27,7 +33,7 @@
     position: absolute;
     width: 61px;
     height: 61px;
-    top: 0px;
+    top: 0;
     left: 0;
     background-image: url("../img/bg-hit-tablet.svg");
     background-position: left top;
@@ -39,7 +45,7 @@
     position: absolute;
     width: 61px;
     height: 61px;
-    top: 0px;
+    top: 0;
     left: 0;
     font-size: 14px;
     line-height: 30px;
@@ -47,13 +53,5 @@
     text-transform: uppercase;
     font-weight: 800;
     transform: rotate(-45deg);
-  }
-}
-
-.tariff-rate {
-  td {
-    padding: 20px 25px;
-    background-color: @bg-color-white;
-    border: 1px solid @border-color-lightgray;
   }
 }
