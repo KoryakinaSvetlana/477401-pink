@@ -1,17 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet">
   <title>Конкурс</title>
 </head>
 <body>
   <header class="page-header">
-    <a href="index.html">
-      <img class="page-header__logo" src="http://placehold.it/150x100" alt="Pink">
+    <a class="logo" href="index.html">
+      <img class="logo__image logo__image--white" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Pink">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <ul class="main-nav__list menu-list">
+    <nav class="main-navigation">
+      <button class="main-navigation__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="main-navigation__list menu-list">
         <li class="menu-list__item">
           <a href="index.html">Главная</a>
         </li>
@@ -50,7 +53,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend>Ваши безбашенные достижения в путешествии</legend>
+          <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
           <ul class="form__checkbox">
             <li>
               <input type="checkbox" name="shark" id="shark" checked>
@@ -89,7 +92,7 @@
           </div>
         </fieldset>
         <fieldset>
-          <legend>С каким приложением путешествовали?</legend>
+          <legend class="form__legend">С каким приложением путешествовали?</legend>
           <ul class="form__radio">
             <li>
               <input type="radio" name="application" value="0" id="ios" checked>
@@ -114,14 +117,14 @@
         </fieldset>
 
         <button class="button button--green" type="submit">Отправить форму</button>
-        <p>* - Обязательные поля</p>
+        <p class="form__notice"><span>*</span> - Обязательные поля</p>
       </form>
     </section>
 
   </main>
   <footer class="page-footer">
     <a href="index.html">
-      <img class="page-footer__logo" src="http://placehold.it/150x100" alt="Pink">
+      <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Pink">
     </a>
     <div class="page-footer__social social">
       <ul class="social__list">
@@ -138,7 +141,7 @@
     </div>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
     </div>
   </footer>
 
@@ -157,7 +160,9 @@
     <p>Спасибо за ваше участие, ваша заявка уже поступила к нам.
     В ближайшее время мы рассмотрим ее и оповестим вас.
     </p>
-    <button class="button button--green button-close" type="button">Закрыть окно</button>
+    <div class="modal-confirmed__wrapper">
+      <button class="button button--green button-close" type="button">Закрыть окно</button>
+    </div>
   </section>
 </body>
 </html>

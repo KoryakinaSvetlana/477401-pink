@@ -1,0 +1,65 @@
+.form {
+  fieldset {
+    border: none;
+    background-color: @bg-color-white;
+  }
+
+  fieldset:nth-child(2n) {
+    background-color: @bg-color-lightgray;
+  }
+}
+
+.form__legend {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: @font-color-red;
+}
+
+.form__text-input {
+  label {
+    font-family: @font-family-name;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @font-color-red;
+  }
+
+  input,
+  textarea {
+    padding: 7px 15px;
+    border: 1px solid @border-color-lightgray;
+    font-family: @font-family-name;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @font-color-gray;
+  }
+}
+
+.form__checkbox,
+.form__radio {
+  .reset-list();
+
+  label {
+    font-family: @font-family-name;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: normal;
+    color: @font-color-gray;
+  }
+}
+
+
+.form__notice {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @font-color-gray;
+
+  span {
+    color: @font-color-red;
+  }
+}

@@ -1,0 +1,57 @@
+.photo-item {
+  margin: 20px;
+  padding: 0;
+  background-color: @bg-color-lightgray;
+}
+
+.photo-item__image--panorama {
+  margin-left: -20px;
+  margin-right: -20px;
+  position: relative;
+
+  &::before {
+    content: "Панорама дня";
+    position: absolute;
+    font-family: @font-family-name;
+    font-size: 12px;
+    line-height: 24px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: @font-color-white;
+    width: 140px;
+    height: 37px;
+    background-color: @bg-color-red;
+  }
+}
+
+.photo-item__author {
+  padding-left: 15px;
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @font-color-gray;
+}
+
+.photo-item__timeago {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: @font-color-gray;
+}
+
+.photo-item__comment {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: @font-color-gray;
+  padding-left: 15px;
+}
+
+.photo-item__likes {
+  padding-left: 15px;
+  padding-bottom: 20px;
+}

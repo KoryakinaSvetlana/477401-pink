@@ -1,0 +1,19 @@
+.likes {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: @font-color-red;
+  position: relative;
+  padding-left: 35px;
+
+  &::before {
+    content: "";
+    background-image: url("../img/icon-heart.svg");
+    position: absolute;
+    height: 12px;
+    width: 13px;
+    left: 16px;
+    top: 6px;
+  }
+}

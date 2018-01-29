@@ -1,0 +1,20 @@
+.copyright__text {
+  font-family: @font-family-name;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: @font-color-gray;
+}
+
+.copyright__link {
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("../img/logo-htmlacademy.svg");
+    position: absolute;
+    height: 34px;
+    width: 27px;
+    right: -35px;
+  }
+}
