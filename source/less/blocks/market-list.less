@@ -1,15 +1,36 @@
 .market-list {
   .reset-list();
+  display: flex;
+  padding: 40px 20px;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.market-list__item a {
-  color: @font-color-white;
-
-  &:hover {
-    color: @font-color-white;
+.market-list__item {
+  &--ios a {
+    display: block;
+    background-image: url("../img/logo-apple.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 47px;
+    height: 57px;
   }
 
-  &:active {
-    color: @font-color-white;
+  &--android a {
+    display: block;
+    background-image: url("../img/logo-android.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 47px;
+  }
+
+  &--winows a {
+    display: block;
+    background-image: url("../img/logo-microsoft.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 44px;
+    height: 42px;
   }
 }

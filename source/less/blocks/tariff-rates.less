@@ -3,3 +3,24 @@
   padding: 100px 0 30px 0;
   background-color: @bg-color-lightgray;
 }
+
+.tariff-rates__wrapper {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+@media (min-width: @tablet-width) {
+  .tariff-rates {
+    .slider {
+      &::after,
+      &::before {
+        display: none;
+      }
+    }
+
+    .slider__toggles {
+      display: none;
+    }
+  }
+}

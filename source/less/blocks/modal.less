@@ -1,6 +1,15 @@
 .modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  background: @bg-color-white;
+  box-shadow: 0 7px 15px rgba(0, 1, 1, 0.15);
+
   h2 {
-    font-family: @font-family-name;
     font-size: 18px;
     font-weight: 700;
     line-height: 24px;
@@ -8,10 +17,32 @@
   }
 
   p {
-    font-family: @font-family-name;
+    margin-top: 25px;
+    margin-bottom: 40px;
     font-size: 14px;
     font-weight: normal;
     line-height: 24px;
     color: @font-color-gray;
+  }
+}
+
+.modal__content-wrapper {
+  width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: @tablet-width) {
+  .modal {
+    width: 460px;
+  }
+
+  .modal__content-wrapper {
+    width: 460px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin: 0 auto;
   }
 }

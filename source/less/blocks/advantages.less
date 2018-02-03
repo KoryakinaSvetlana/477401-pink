@@ -1,26 +1,136 @@
 .advantages {
   padding: 0;
   margin: 0;
-  position: relative;
   background-color: @bg-color-white;
-
-  &::before {
-    content: "";
-    background-image: url("../img/bg-triangle-white.svg");
-    position: absolute;
-    height: 94px;
-    width: 1200px;
-    top: 212px;
-  }
 }
 
 .advantages__moto {
   margin: 0;
-  padding: 40px 55px 30px 55px;
-  font-family: @font-family-name;
+  padding: 0;
+  padding-top: 35px;
   font-size: 24px;
   font-weight: 300;
   line-height: 36px;
   text-align: center;
   color: @font-color-gray;
+}
+
+.advantages__24-hour-effect-title {
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.advantages__24-hour-effect {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: @font-color-gray;
+}
+
+.advantages__more-info {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: @font-color-red;
+  text-decoration: underline;
+}
+
+.advantages__white-wrapper {
+  padding: 0;
+  margin: 0;
+  background-color: @bg-color-white;
+}
+
+.advantages__gray-wrapper {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  background-color: @bg-color-lightgray;
+
+  &::before {
+    content: "";
+    background-image: url("../img/bg-triangle-white.svg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 65px;
+    width: 1200px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+.advantages__24-hour-effect-wrapper {
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages__gray-wrapper {
+    &::before {
+      height: 90px;
+    }
+  }
+
+  .advantages__24-hour-effect-wrapper {
+    display: block;
+    background-color: @bg-color-white;
+  }
+
+  .advantages__24-hour-effect-box-wrapper {
+    padding: 100px 0 100px 310px;
+    position: relative;
+
+    &::before {
+      content: "24";
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 120px;
+      font-weight: 700;
+      color: @font-color-red;
+      line-height: 187px;
+    }
+  }
+
+  .advantages__moto {
+    margin: 0;
+    padding: 0;
+    padding-top: 50px;
+    font-size: 40px;
+    line-height: 45px;
+  }
+
+  .advantages__moto:last-child {
+    padding: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .advantages__24-hour-effect-wrapper {
+    background-color: @bg-color-lightgray;
+  }
+
+  .advantages__24-hour-effect-box-wrapper {
+    padding: 130px 0 115px 370px;
+  }
+
+  .advantages__gray-wrapper {
+    &::before {
+      height: 94px;
+    }
+  }
 }

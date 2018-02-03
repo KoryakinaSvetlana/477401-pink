@@ -15,22 +15,47 @@
 }
 
 .reviews__list {
-  padding: 45px 20px 35px 20px;
+  padding: 45px 0 35px 0;
+  margin: 0;
 }
 
 .reviews__author-name {
-  font-family: @font-family-name;
   font-size: 18px;
   font-weight: 700;
   line-height: 30px;
-  text-align: center;
+  font-style: initial;
   color: @font-color-black;
+  order: 1;
+}
+
+.reviews__author-add-info {
+  display: none;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 30px;
+  color: @font-color-gray;
 }
 
 .reviews__text {
-  font-family: @font-family-name;
   font-size: 14px;
   line-height: 30px;
   text-align: center;
   color: @font-color-gray;
+  order: 2;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews__text {
+    font-size: 18px;
+    order: 1;
+  }
+
+  .reviews__author-name {
+    order: 2;
+  }
+
+  .reviews__author-add-info {
+    display: block;
+    order: 3;
+  }
 }

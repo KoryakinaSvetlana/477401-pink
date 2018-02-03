@@ -4,16 +4,41 @@
   background-color: @bg-color-lightgray;
 
   h2 {
-    font-family: @font-family-name;
     font-size: 14px;
     line-height: 30px;
     font-weight: normal;
     color: @font-color-gray;
+    text-align: center;
   }
 }
 
 .add-photo__tools {
   .reset-list();
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 35px 65px 20px;
+}
+
+.add-photo__tool-item {
+  input {
+    display: none;
+    position: absolute;
+    left: 10px;
+    width: 240px;
+    margin: 10px;
+    box-sizing: border-box;
+  }
+
+  &--active {
+    .add-photo__tool-item-icon {
+      fill: @bg-color-red;
+    }
+
+    input {
+      display: block;
+    }
+  }
 }
 
 .add-photo__header-wrapper {
@@ -23,5 +48,87 @@
 }
 
 .add-photo__image {
-  margin: 20px;
+  padding-top: 20px;
+}
+
+.add-photo__tool-item-icon {
+  fill: @bg-color-gray;
+}
+
+.add-photo__button-wrapper {
+  .button {
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .add-photo {
+    h2 {
+      font-size: 18px;
+    }
+  }
+
+  .add-photo__image {
+    width: 300px;
+    height: 400px;
+  }
+
+  .add-photo__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0 55px 0;
+  }
+
+  .add-photo__content-column {
+    text-align: center;
+    width: 300px;
+
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  .add-photo__tools {
+    display: block;
+  }
+
+  .add-photo__tool-item {
+    display: flex;
+    justify-content: space-between;
+    width: 275px;
+
+    input {
+      display: block;
+      position: static;
+      width: 205px;
+    }
+  }
+
+  .add-photo__tool-item-icon {
+    fill: @bg-color-red;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-photo__content-column {
+    &:first-child {
+      padding-left: 80px;
+    }
+
+    &:nth-child(2) {
+      padding-right: 60px;
+      width: 410px;
+    }
+  }
+
+  .add-photo__button-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+    .button {
+      width: 185px;
+    }
+  }
 }

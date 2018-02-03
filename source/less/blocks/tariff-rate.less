@@ -6,6 +6,12 @@
     padding: 20px 25px;
     background-color: @bg-color-white;
     border: 1px solid @border-color-lightgray;
+    width: 280px;
+    box-sizing: border-box;
+  }
+
+  tr:first-child {
+    height: 100px;
   }
 }
 
@@ -15,14 +21,23 @@
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
-  border: 1px solid @bg-color-white;
+  border: 1px solid @bg-color-lightgray;
   background-color: @bg-menu-color-darkgray;
   color: @font-color-white;
+  box-sizing: border-box;
 
-  span {
+  em {
+    display: block;
     font-size: 24px;
     font-weight: 300;
+    font-style: normal;
   }
+}
+
+.tariff-rate__fixed {
+  text-align: left;
+  position: relative;
+  z-index: 1;
 }
 
 .tariff-rate__th--hit {
@@ -53,5 +68,82 @@
     text-transform: uppercase;
     font-weight: 800;
     transform: rotate(-45deg);
+  }
+}
+
+.tariff-rate__no,
+.tariff-rate__yes {
+  display: block;
+  height: 27px;
+  width: 27px;
+  background-image: url("../img/icon-no.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 0 0 0 auto;
+}
+
+.tariff-rate__yes {
+  background-image: url("../img/icon-yes.svg");
+}
+
+.tafiff-rate__first-column {
+  position: absolute;
+  left: -280px;
+  width: 280px;
+}
+
+.tafiff-rate__second-column {
+  position: absolute;
+  left: 0;
+  width: 280px;
+}
+
+.tafiff-rate__third-column {
+  position: absolute;
+  left: 280px;
+  width: 280px;
+}
+
+@media (min-width: @tablet-width) {
+  .tariff-rate {
+    width: 100%;
+
+    td {
+      width: 25%;
+      padding: 10px 15px;
+    }
+
+    .tariff-rate__no,
+    .tariff-rate__yes {
+      margin: auto;
+    }
+  }
+
+  .tafiff-rate__first-column,
+  .tafiff-rate__second-column,
+  .tafiff-rate__third-column {
+    position: static;
+    width: 25%;
+  }
+
+  .tariff-rate__th--hit {
+    position: relative;
+  }
+
+  .tariff-rate__fixed {
+    position: static;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariff-rate {
+    td {
+      width: 25%;
+      padding: 20px 25px;
+    }
+  }
+
+  .tariff-rate__fixed {
+    font-size: 18px;
   }
 }
