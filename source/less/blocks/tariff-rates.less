@@ -8,6 +8,7 @@
   margin: 0;
   padding: 0;
   position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: @tablet-width) {
@@ -22,5 +23,16 @@
     .slider__toggles {
       display: none;
     }
+  }
+
+  .tariff-rates__wrapper {
+    width: 620px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .tariff-rates__wrapper {
+    width: 940px;
   }
 }
