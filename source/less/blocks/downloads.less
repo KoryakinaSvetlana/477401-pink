@@ -1,11 +1,24 @@
 .downloads {
   margin: 0;
-  padding: 25px 20px 35px 20px;
-  background-color: @bg-color-darkgray;
+  padding: 0;
+}
+
+.downloads__box {
+  width: 280px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+
+.downloads__moto {
+  padding: 10px 35px;
+  font-size: 40px;
+  line-height: 56px;
+  font-weight: 300;
+  color: @font-color-white;
+  display: none;
 }
 
 .downloads__button {
-  font-family: @font-family-name;
   font-size: 18px;
   line-height: 18px;
   color: @font-color-white;
@@ -18,9 +31,27 @@
 }
 
 .downloads__description {
-  font-family: @font-family-name;
   font-size: 14px;
   font-weight: 300;
   line-height: 24px;
   color: @font-color-white;
+}
+
+@media (min-width: @tablet-width) {
+  .downloads__description {
+    font-size: 18px;
+  }
+
+  .downloads__box {
+    width: 300px;
+  }
+
+  .downloads__button {
+    padding: 15px 50px;
+    border-radius: 30px;
+  }
+
+  .downloads__moto {
+    display: block;
+  }
 }

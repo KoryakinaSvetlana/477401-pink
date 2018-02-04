@@ -1,40 +1,56 @@
 .form {
-  fieldset {
-    border: none;
-    background-color: @bg-color-white;
-  }
+  margin: 0;
+  padding: 0;
+}
 
-  fieldset:nth-child(2n) {
-    background-color: @bg-color-lightgray;
-  }
+.form__fieldset {
+  margin: 0 auto;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: none;
+  width: 280px;
 }
 
 .form__legend {
-  font-family: @font-family-name;
+  padding: 0 20px 40px 20px;
   font-size: 14px;
   line-height: 18px;
   font-weight: normal;
+  text-transform: uppercase;
   color: @font-color-red;
+  text-align: center;
 }
 
 .form__text-input {
   label {
-    font-family: @font-family-name;
+    margin-bottom: 15px;
+    padding-left: 24px;
     font-size: 14px;
     line-height: 30px;
     font-weight: normal;
     color: @font-color-red;
+    text-transform: uppercase;
   }
 
   input,
   textarea {
+    width: 100%;
+    margin-top: 5px;
     padding: 7px 15px;
     border: 1px solid @border-color-lightgray;
-    font-family: @font-family-name;
+    font-family: inherit;
     font-size: 18px;
     line-height: 30px;
     font-weight: normal;
     color: @font-color-gray;
+    box-sizing: border-box;
+
+    &::placeholder {
+      font-size: 18px;
+      line-height: 30px;
+      color: @font-color-gray;
+    }
   }
 }
 
@@ -53,13 +69,73 @@
 
 
 .form__notice {
-  font-family: @font-family-name;
   font-size: 14px;
   line-height: 30px;
   font-weight: normal;
+  text-transform: uppercase;
   color: @font-color-gray;
 
-  span {
+  sup {
     color: @font-color-red;
+  }
+}
+
+.form__field-wrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__fieldset {
+    border: 1px solid @border-color-lightgray;
+    padding: 50px 60px 50px 60px;
+    width: 620px;
+    box-sizing: border-box;
+  }
+
+  .form__field-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+    order: 5;
+  }
+
+  .form__legend {
+    padding: 0 15px 0 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+
+  .form__field-wrapper {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .form__fieldset {
+    width: initial;
+    padding: 30px 60px 30px 60px;
+  }
+
+  .form__legend {
+    white-space: nowrap;
   }
 }

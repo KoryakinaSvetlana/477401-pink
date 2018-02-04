@@ -1,5 +1,6 @@
 .advantages-list {
-  padding: 75px 20px 315px 20px;
+  position: relative;
+  padding: 75px 0 315px 0;
   margin: 0;
   background-color: @bg-color-lightgray;
 
@@ -15,5 +16,30 @@
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-position: center top;
     background-repeat: no-repeat;
+  }
+}
+
+
+@media (min-width: @tablet-width) {
+  .advantages-list {
+    padding: 75px 20px 20px 310px;
+
+    &::after {
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages-list {
+    padding: 350px 0 35px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
   }
 }

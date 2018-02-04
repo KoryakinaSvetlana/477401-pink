@@ -1,4 +1,44 @@
 .slider {
   margin: 0;
   padding: 0;
+  position: relative;
+}
+
+.slider__item {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: none;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.slider__toggles {
+  text-align: center;
+}
+
+@media (min-width: @desktop-width) {
+  .slider__toggles {
+    display: none;
+  }
+
+  .slider {
+    &::before {
+      content: "<";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: ">";
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }

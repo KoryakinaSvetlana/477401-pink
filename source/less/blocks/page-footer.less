@@ -1,7 +1,39 @@
 .page-footer {
   margin: 0;
-  padding: 20px 20px 35px 20px;
+  padding: 20px 0 35px 0;
   background-color: @bg-color-white;
   min-height: 248px;
   text-align: center;
+  box-sizing: border-box;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.page-footer__wrapper {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    min-height: 128px;
+    padding: 35px 0 35px 0;
+
+    &--hidden {
+      display: block;
+    }
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-footer {
+    min-height: 198px;
+    padding: 65px 0 65px 0;
+  }
 }

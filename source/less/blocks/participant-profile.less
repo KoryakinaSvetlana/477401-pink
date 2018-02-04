@@ -2,3 +2,144 @@
   margin: 0;
   padding: 0;
 }
+
+.participant-profile__suggestion {
+  padding: 45px 0 30px 0;
+  font-size: 14px;
+  line-height: 30px;
+  color: @font-color-gray;
+  text-align: center;
+
+  span {
+    display: none;
+  }
+}
+
+.participant-profile__fieldset-wrapper {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 45px;
+
+  &:nth-child(2n) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: @bg-color-lightgray;
+  }
+}
+
+.participant-profile__contact-info {
+  legend {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .participant-profile__suggestion {
+    padding: 85px 0 55px 0;
+    font-size: 18px;
+
+    span {
+      display: block;
+    }
+  }
+
+  .participant-profile__fieldset-wrapper {
+    &:nth-child(2n) {
+      padding: 0;
+      background-color: initial;
+    }
+
+    &:first-child {
+      order: 1;
+
+      fieldset {
+        border: none;
+      }
+    }
+
+    &:nth-child(2) {
+      order: 4;
+    }
+
+    &:nth-child(3) {
+      order: 3;
+    }
+
+    &:nth-child(4) {
+      order: 2;
+    }
+
+    &:nth-child(5) {
+      order: 5;
+    }
+  }
+
+  .participant-profile__name {
+    padding: 0;
+
+    .form__text-input {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    label {
+      padding-left: 0;
+      margin-right: 20px;
+      margin-bottom: 0;
+      vertical-align: middle;
+    }
+  }
+
+  .participant-profile__contact-info {
+    legend {
+      display: block;
+    }
+
+    .form__text-input {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      padding-bottom: 30px;
+    }
+
+    label {
+      margin-top: 15px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .participant-profile__suggestion {
+    padding: 85px 60px 60px 60px;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .participant-profile__fieldset-wrapper {
+    padding: 0;
+
+    &:first-child {
+      width: 435px;
+    }
+
+    &:nth-child(2) {
+      width: 940px;
+    }
+
+    &:nth-child(3) {
+      width: 940px;
+    }
+
+    &:nth-child(4) {
+      width: 435px;
+    }
+
+    &:nth-child(5) {
+      width: 940px;
+    }
+  }
+}

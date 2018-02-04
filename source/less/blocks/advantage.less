@@ -1,3 +1,23 @@
+.advantage {
+  position: relative;
+  width: 280px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 305px;
+    width: 250px;
+    top: -310px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: none;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
 .advantage__title {
   font-family: @font-family-name;
   font-size: 18px;
@@ -12,4 +32,30 @@
   line-height: 24px;
   text-align: center;
   color: @font-color-gray;
+}
+
+@media (min-width: @tablet-width) {
+  .advantage {
+    width: 310px;
+  }
+
+  .advantage__title,
+  .advantage__description {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantage {
+    width: 250px;
+
+    &::after {
+      display: block;
+    }
+  }
+
+  .advantage__title,
+  .advantage__description {
+    text-align: center;
+  }
 }
