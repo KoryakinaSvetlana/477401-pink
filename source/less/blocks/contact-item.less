@@ -1,31 +1,81 @@
 .contact-item {
   margin: 0;
   padding: 0;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 22px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  &:nth-child(2) {
+    margin-bottom: 25px;
+  }
 }
 
 .contact-item__title {
-  font-family: @font-family-name;
+  margin: 0;
   font-size: 18px;
-  line-height: 24px;
+  line-height: 27px;
   font-weight: 700;
   text-align: center;
   color: @font-color-gray;
 }
 
 .contact-item__text {
-  font-family: @font-family-name;
+  margin: 0;
   font-size: 24px;
-  line-height: 36px;
+  line-height: 29px;
   font-weight: 300;
   text-align: center;
   color: @font-color-red;
 }
 
+@media (min-width: @tablet-width) {
+  .contact-item {
+    width: 300px;
+    margin: 0;
+    margin-bottom: 46px;
+
+    &:first-child {
+      .contact-item__title {
+        margin-bottom: 2px;
+      }
+    }
+
+    &:last-child {
+      margin: 0 auto;
+      width: 250px;
+    }
+  }
+
+  .contact-item__title {
+    margin-bottom: 5px;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .contact-item {
     width: 250px;
+
+    &:first-child {
+      .contact-item__title {
+        margin-bottom: 21px;
+      }
+    }
+
+    &:nth-child(2) {
+      .contact-item__title {
+        margin-bottom: 23px;
+      }
+    }
+
+    &:last-child {
+      .contact-item__text {
+        text-indent: -7px;
+      }
+    }
+  }
+
+  .contact-item__title {
+    margin-bottom: 21px;
   }
 
   .contact-item:first-child {

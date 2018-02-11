@@ -3,21 +3,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 625px;
+  min-height: 733px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: 100% 320px;
+  background-size: 100% 460px;
   background-color: @bg-color-darkgray;
 
   &--inner-page {
-    min-height: 240px;
+    min-height: 236px;
   }
 }
 
 .page-header__wrapper {
   background-color: rgba(0, 0, 0, 0.5);
-  min-height: 69px;
+  min-height: 65px;
   padding: 0;
   margin: 0;
 
@@ -30,16 +30,16 @@
 .page-header__title {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 95px;
   margin: 0;
   padding: 0;
   width: 280px;
   font-size: 24px;
   font-weight: 300;
-  line-height: 36px;
+  line-height: 29px;
   color: @font-color-white;
   text-align: center;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 
 @media (min-width: @tablet-width) {
@@ -56,13 +56,14 @@
   .page-header__wrapper {
     display: flex;
     justify-content: space-between;
-    min-height: 109px;
+    min-height: 111px;
   }
 
   .page-header__title {
     font-size: 50px;
-    line-height: 64px;
+    line-height: 60px;
     width: 620px;
+    top: 180px;
   }
 }
 
@@ -77,5 +78,6 @@
 
   .page-header__title {
     width: 940px;
+    top: 175px;
   }
 }

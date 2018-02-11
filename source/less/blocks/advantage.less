@@ -1,6 +1,7 @@
 .advantage {
   position: relative;
   width: 280px;
+  box-sizing: border-box;
 
   &::after {
     content: "";
@@ -15,11 +16,37 @@
     background-image: url("../img/iphone-screen-mobile@1x.png");
     background-position: center top;
     background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 17px;
+    width: 294px;
+    margin: 0 auto;
+    display: none;
+    left: 0;
+    right: 0;
+    background-image: url("../img/phone-shadow.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: 1;
   }
 }
 
+.advantage__content-wrapper {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  background-color: #f2f2f2;
+  z-index: 2;
+}
+
 .advantage__title {
-  font-family: @font-family-name;
+  padding: 0;
+  margin: 0;
+  margin-top: 18px;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -27,7 +54,9 @@
 }
 
 .advantage__description {
-  font-family: @font-family-name;
+  padding: 0;
+  margin: 0;
+  margin-top: 12px;
   font-size: 14px;
   line-height: 24px;
   text-align: center;
@@ -36,7 +65,7 @@
 
 @media (min-width: @tablet-width) {
   .advantage {
-    width: 310px;
+    width: initial;
   }
 
   .advantage__title,
@@ -47,15 +76,45 @@
 
 @media (min-width: @desktop-width) {
   .advantage {
-    width: 250px;
+    width: 295px;
 
     &::after {
       display: block;
+      width: 186px;
+      height: 382px;
+      top: -300px;
+      background-image: url("../img/iphone-screen-desktop@1x.png");
+    }
+
+    &::before {
+      display: block;
+      top: -9px;
+    }
+
+    &:first-child {
+      .advantage__content-wrapper {
+        padding: 38px 25px 10px 30px;
+      }
     }
   }
 
   .advantage__title,
   .advantage__description {
     text-align: center;
+  }
+
+  .advantage__title {
+    margin-bottom: 24px;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .advantage__description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .advantage__content-wrapper {
+    padding: 38px 30px 10px 25px;
   }
 }

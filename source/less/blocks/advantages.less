@@ -7,12 +7,15 @@
 .advantages__moto {
   margin: 0;
   padding: 0;
-  padding-top: 35px;
   font-size: 24px;
   font-weight: 300;
-  line-height: 36px;
+  line-height: 29px;
   text-align: center;
   color: @font-color-gray;
+
+  &:first-child {
+    margin-bottom: 29px;
+  }
 }
 
 .advantages__24-hour-effect-title {
@@ -25,6 +28,10 @@
 }
 
 .advantages__24-hour-effect {
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 11px;
+  padding: 0;
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
@@ -40,16 +47,11 @@
 }
 
 .advantages__white-wrapper {
-  padding: 0;
-  margin: 0;
-  background-color: @bg-color-white;
-}
-
-.advantages__gray-wrapper {
   position: relative;
   padding: 0;
   margin: 0;
-  background-color: @bg-color-lightgray;
+  background-color: @bg-color-white;
+  padding-top: 39px;
 
   &::before {
     content: "";
@@ -57,12 +59,18 @@
     height: 65px;
     width: 100%;
     left: 0;
-    top: -1;
+    bottom: -64px;
     z-index: 1;
     background-image: url("../img/bg-triangle-white.svg");
     background-position: left bottom;
     background-repeat: no-repeat;
   }
+}
+
+.advantages__gray-wrapper {
+  padding: 0;
+  margin: 0;
+  background-color: @bg-color-lightgray;
 }
 
 .advantages__24-hour-effect-wrapper {
@@ -71,31 +79,61 @@
   display: none;
 }
 
+.advantages__list {
+  padding: 95px 0 286px 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 275px;
+    width: 157px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-image: url("../img/iphone-screen-mobile@1x.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+  }
+}
+
 @media (min-width: @tablet-width) {
-  .advantages__gray-wrapper {
+  .advantages__white-wrapper {
+    padding-top: 0;
+    padding-bottom: 9px;
+
     &::before {
       height: 90px;
+      bottom: -89px;
     }
   }
 
   .advantages__24-hour-effect-wrapper {
+    position: relative;
     display: block;
     background-color: @bg-color-white;
+    z-index: 2;
   }
 
   .advantages__24-hour-effect-box-wrapper {
-    padding: 100px 0 100px 310px;
+    padding: 97px 15px 100px 309px;
     position: relative;
 
     &::before {
       content: "24";
       position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 120px;
+      top: 129px;
+      left: 32px;
+      width: 175px;
+      height: 175px;
+      font-size: 96px;
       font-weight: 700;
       color: @font-color-red;
-      line-height: 187px;
+      line-height: 164px;
+      vertical-align: middle;
+      text-align: center;
+      border-radius: 50%;
+      box-shadow: 0 0 0 14px @font-color-red;
     }
   }
 
@@ -104,15 +142,49 @@
     padding: 0;
     padding-top: 50px;
     font-size: 40px;
-    line-height: 45px;
+    line-height: 48px;
+
+    &:first-child {
+      margin-bottom: 0px;
+    }
+
+    &:last-child {
+      padding: 0;
+    }
   }
 
-  .advantages__moto:last-child {
-    padding: 0;
+  .advantages__list {
+    padding: 94px 0px 7px 306px;
+
+    &::after {
+      margin: 0;
+      bottom: -9px;
+      height: 488px;
+      width: 267px;
+      background-size: cover;
+      z-index: 1;
+    }
   }
+
+  .advantages__24-hour-effect-title {
+    span {
+      display: block;
+    }
+  }
+
 }
 
 @media (min-width: @desktop-width) {
+  .advantages__white-wrapper {
+    padding-top: 20px;
+    padding-bottom: 135px;
+  }
+
+  .advantages__moto {
+    font-size: 50px;
+    line-height: 59px;
+  }
+
   .advantages {
     .container {
       position: relative;
@@ -131,6 +203,53 @@
   .advantages__gray-wrapper {
     &::before {
       height: 94px;
+    }
+  }
+
+  .advantages__list {
+    margin-left: -2px;
+    padding: 295px 6px 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: transparent;
+
+    &::after {
+      display: none;
+    }
+  }
+
+
+  .advantages__24-hour-effect-title {
+    span {
+      display: inline;
+    }
+  }
+
+  .advantages__24-hour-effect {
+    margin-top: 21px;
+    margin-bottom: 31px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .advantages__more-info {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .advantages__24-hour-effect-box-wrapper {
+    padding: 113px 55px 113px 364px;
+    position: relative;
+
+    &::before {
+      top: 108px;
+      left: 37px;
+      width: 220px;
+      height: 220px;
+      font-size: 120px;
+      line-height: 204px;
+      box-shadow: 0 0 0 17px @font-color-red;
     }
   }
 }

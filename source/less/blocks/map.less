@@ -1,12 +1,52 @@
 .map {
-  position: absolute;
-  bottom: -302px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  overflow: hidden;
   z-index: -1;
 }
 
 .map__image {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -1;
+  bottom: -8px;
   width: 100%;
+}
+
+.map__marker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: 61px;
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/icon-map-marker.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    height: 365px;
+  }
+
+  .map__marker {
+      bottom: 143px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    margin-top: -50px;
+    height: 505px;
+  }
+
+  .map__marker {
+      bottom: 203px;
+  }
 }

@@ -6,11 +6,32 @@
 
 .photos__moto {
   margin: 0;
-  padding: 45px 0 35px 0;
+  padding: 45px 0 49px 0;
   font-family: @font-family-name;
   font-size: 14px;
   line-height: 30px;
   color: @font-color-gray;
   font-weight: normal;
   text-align: center;
+
+  span {
+    display: block;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .photos__moto {
+    padding: 93px 90px 76px 90px;
+    font-size: 18px;
+    span {
+      display: inline-block;
+    }
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .photos__moto {
+    padding: 93px 90px 87px 90px;
+  }
 }
