@@ -22,6 +22,8 @@
 }
 
 .add-photo__tool-item {
+  cursor: pointer;
+
   &:nth-child(2) {
     margin-right: 10px;
   }
@@ -45,6 +47,12 @@
       display: block;
     }
   }
+
+  &:hover {
+    .add-photo__tool-item-icon {
+      fill: @bg-color-hover-gray;
+    }
+  }
 }
 
 .add-photo__content-wrapper {
@@ -53,7 +61,7 @@
 
 .add-photo__tool-item-range {
   background-color: transparent;
-  -webkit-appearance: none;
+  appearance: none;
   margin: 10px 0;
   padding: 10px 5px 10px 5px;
   width: 100%;
@@ -93,7 +101,7 @@
     border-radius: 50%;
     background: @bg-color-lightgray;
     cursor: pointer;
-    -webkit-appearance: none;
+    appearance: none;
     margin-top: -6px;
     box-sizing: border-box;
   }
@@ -128,16 +136,14 @@
 
   &::-ms-fill-lower {
     background: @bg-color-gray;
-    border: 0px solid #000101;
-
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0 solid #000101;
+    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
   }
 
   &::-ms-fill-upper {
     background: @bg-color-gray;
-    border: 0px solid #000101;
-
-    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 0 solid #000101;
+    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
   }
 
   &::-ms-thumb {
@@ -148,7 +154,6 @@
     background: @bg-color-lightgray;
     cursor: pointer;
   }
-
 }
 
 .add-photo__header-wrapper {
@@ -161,10 +166,6 @@
   padding-top: 20px;
 }
 
-.add-photo__tool-item-icon {
-  fill: @bg-color-gray;
-}
-
 .add-photo__button-wrapper {
   padding-bottom: 31px;
 
@@ -174,6 +175,8 @@
 }
 
 .add-photo__tool-item-icon {
+  fill: @bg-arrow-color-gray;
+
   &--crop {
     width: 48px;
     height: 48px;
@@ -206,7 +209,8 @@
   .add-photo__content-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 55px 0 55px 0;
+    margin-left: 0;
+    padding: 36px 0 47px 0;
   }
 
   .add-photo__content-column {
@@ -222,7 +226,7 @@
 
   .add-photo__tools {
     display: block;
-    padding: 5px 0px 20px 25px;
+    padding: 5px 0 20px 25px;
   }
 
   .add-photo__tool-item {
@@ -233,6 +237,7 @@
     align-items: center;
     border-bottom: 1px solid @border-color-middlegray;
     box-sizing: border-box;
+    cursor: default;
 
     input {
       display: block;
@@ -250,22 +255,21 @@
       height: 73px;
       padding: 12px 3px 5px 3px;
     }
-  }
 
-  .add-photo__tool-item-icon {
-    fill: @bg-color-red;
+    &:hover {
+      .add-photo__tool-item-icon {
+        fill: @bg-color-red;
+      }
+    }
   }
 
   .add-photo__header-wrapper {
     padding: 30px 3px 55px 0;
   }
 
-  .add-photo__content-wrapper {
-    margin-left: 0;
-    padding: 36px 0 47px 0;
-  }
-
   .add-photo__tool-item-icon {
+    fill: @bg-color-red;
+
     &--crop {
       width: 22px;
       height: 22px;
@@ -283,7 +287,7 @@
   }
 
   .add-photo__button-wrapper {
-    padding: 0px 10px 7px 22px;
+    padding: 0 10px 7px 22px;
 
     .button {
       width: 260px;
@@ -311,9 +315,14 @@
   .add-photo__button-wrapper {
     display: flex;
     justify-content: space-between;
+    padding: 0 0 7px 0;
 
     .button {
       width: 185px;
+
+      &:first-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -337,7 +346,7 @@
   }
 
   .add-photo__tools {
-    padding: 5px 0px 20px 0;
+    padding: 5px 0 20px 0;
   }
 
   .add-photo__tool-item-icon {
@@ -365,21 +374,11 @@
     }
 
     &:first-child {
-      padding: 7px 15px 5px 0px;
+      padding: 7px 15px 5px 0;
     }
 
     &:nth-child(2) {
-      padding: 10px 15px 5px 0px;
-    }
-  }
-
-  .add-photo__button-wrapper {
-    padding: 0 0 7px 0;
-
-    .button {
-      &:first-child {
-        margin-bottom: 0;
-      }
+      padding: 10px 15px 5px 0;
     }
   }
 }

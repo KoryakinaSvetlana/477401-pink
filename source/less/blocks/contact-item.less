@@ -56,18 +56,24 @@
     width: 250px;
 
     &:first-child {
+      order: 1;
+
       .contact-item__title {
         margin-bottom: 21px;
       }
     }
 
     &:nth-child(2) {
+      order: 3;
+
       .contact-item__title {
         margin-bottom: 23px;
       }
     }
 
     &:last-child {
+      order: 2;
+
       .contact-item__text {
         text-indent: -7px;
       }
@@ -76,17 +82,5 @@
 
   .contact-item__title {
     margin-bottom: 21px;
-  }
-
-  .contact-item:first-child {
-    order: 1;
-  }
-
-  .contact-item:nth-child(2) {
-    order: 3;
-  }
-
-  .contact-item:nth-child(3) {
-    order: 2;
   }
 }
