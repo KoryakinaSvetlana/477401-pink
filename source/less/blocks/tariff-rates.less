@@ -1,6 +1,6 @@
 .tariff-rates {
   margin: 0;
-  padding: 100px 0 30px 0;
+  padding: 135px 0 30px 0;
   background-color: @bg-color-lightgray;
 }
 
@@ -11,28 +11,40 @@
   overflow: hidden;
 }
 
+.tariff-rates__toggles {
+  padding-top: 47px;
+  padding-bottom: 20px;
+}
+
 @media (min-width: @tablet-width) {
   .tariff-rates {
+    padding: 107px 0 69px 0;
+
     .slider {
       &::after,
       &::before {
         display: none;
       }
     }
+  }
 
-    .slider__toggles {
-      display: none;
-    }
+  .tariff-rates__toggles {
+    display: none;
   }
 
   .tariff-rates__wrapper {
     width: 620px;
     margin: 0 auto;
+    overflow: visible;
   }
 }
 
 @media (min-width: @desktop-width) {
   .tariff-rates__wrapper {
     width: 940px;
+  }
+
+  .tariff-rates {
+    padding: 138px 0 95px 0;
   }
 }

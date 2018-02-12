@@ -41,23 +41,25 @@
           <h2 class="visually-hidden">Скачать приложение</h2>
           <p class="downloads__moto">Взгляните на жизнь иначе!</p>
           <a class="downloads__button" href="#">Скачать приложение</a>
-          <ul class="downloads__list market-list">
-            <li class="market-list__item market-list__item--ios">
-              <a href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">
-                <span class="visually-hidden">iOS</span>
-              </a>
-            </li>
-            <li class="market-list__item market-list__item--android">
-              <a href="https://play.google.com/store?hl=ru">
-                <span class="visually-hidden">Android</span>
-              </a>
-            </li>
-            <li class="market-list__item market-list__item--winows">
-              <a href="https://www.microsoft.com/ru-ru/store/b/home">
-                <span class="visually-hidden">Windows</span>
-              </a>
-            </li>
-          </ul>
+          <div class="downloads__list">
+            <ul class="market-list">
+              <li class="market-list__item market-list__item--ios">
+                <a href="https://itunes.apple.com/ru/genre/ios/id36?mt=8">
+                  <span class="visually-hidden">iOS</span>
+                </a>
+              </li>
+              <li class="market-list__item market-list__item--android">
+                <a href="https://play.google.com/store?hl=ru">
+                  <span class="visually-hidden">Android</span>
+                </a>
+              </li>
+              <li class="market-list__item market-list__item--winows">
+                <a href="https://www.microsoft.com/ru-ru/store/b/home">
+                  <span class="visually-hidden">Windows</span>
+                </a>
+              </li>
+            </ul>
+          </div>
           <p class="downloads__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </div>
@@ -76,16 +78,22 @@
         <div class="container">
           <div class="advantages__list advantages-list">
             <div class="advantages-list__item advantage">
-              <h3 class="advantage__title">Поднимает настроение</h3>
-              <p class="advantage__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              <div class="advantage__content-wrapper">
+                <h3 class="advantage__title">Поднимает настроение</h3>
+                <p class="advantage__description">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </div>
             </div>
             <div class="advantages-list__item advantage">
-              <h3 class="advantage__title">Меняет мир вокруг</h3>
-              <p class="advantage__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <div class="advantage__content-wrapper">
+                <h3 class="advantage__title">Меняет мир вокруг</h3>
+                <p class="advantage__description">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              </div>
             </div>
             <div class="advantages-list__item advantage">
-              <h3 class="advantage__title">Заводит новых друзей</h3>
-              <p class="advantage__description">Ставьте лайки, комментруйте, делитесь фотографиями с друзьями и заводите новых</p>
+              <div class="advantage__content-wrapper">
+                <h3 class="advantage__title">Заводит новых друзей</h3>
+                <p class="advantage__description">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              </div>
             </div>
           </div>
         </div>
@@ -93,7 +101,7 @@
       <div class="advantages__24-hour-effect-wrapper">
         <div class="container">
           <div class="advantages__24-hour-effect-box-wrapper">
-            <h3 class="advantages__24-hour-effect-title">Эффект на 24 часа!</h3>
+            <h3 class="advantages__24-hour-effect-title">Эффект <span>на 24 часа!</span></h3>
             <p class="advantages__24-hour-effect">Британские ученые провели исследования
                 и доказали, что положительный эффект
                 от использования приложения длится
@@ -112,7 +120,7 @@
             <blockquote class="slider__item slider__item--active">
               <cite class="reviews__author-name">Николай Петров</cite>
               <p class="reviews__author-add-info">25 лет, водитель трамвая</p>
-              <p class="reviews__text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился с будущей женой в комментариях к выложенной фотографии"</p>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
             </blockquote>
             <blockquote class="slider__item">
               <cite class="reviews__author-name">Константин Ивлев</cite>
@@ -125,11 +133,27 @@
               <p class="reviews__text">"Отличное приложение, вступайте в наши ряды!"</p>
             </blockquote>
           </div>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
+          <a class="slider__left-arrow" href="#">
+            <svg viewBox="0 0 22 42" width="22" height="42">
+              <path d="M2,20.7L21.3,1.4c0.3-0.3,0.3-0.9,0-1.2c-0.3-0.3-0.9-0.3-1.2,0L0.2,20.1c-0.3,0.3-0.3,0.9,0,1.2l19.8,19.8c0.2,0.2,0.4,0.2,0.6,0.2c0.2,0,0.4-0.1,0.6-0.2c0.3-0.3,0.3-0.9,0-1.2L2,20.7z"/>
+            </svg>
+          </a>
+          <a class="slider__right-arrow" href="#">
+            <svg viewBox="0 0 22 42" width="22" height="42">
+              <path d="M19.5,20.7L0.2,1.4c-0.3-0.3-0.3-0.9,0-1.2c0.3-0.3,0.9-0.3,1.2,0l19.8,19.8c0.3,0.3,0.3,0.9,0,1.2L1.4,41.1c-0.2,0.2-0.4,0.2-0.6,0.2c-0.2,0-0.4-0.1-0.6-0.2c-0.3-0.3-0.3-0.9,0-1.2L19.5,20.7z"/>
+            </svg>
+          </a>
+          <div class="reviews__toggles slider__toggles">
+            <a class="slider__toggle slider__toggle--active" href="#">
+              <span class="visually-hidden">1</span>
+            </a>
+            <a class="slider__toggle" href="#">
+              <span class="visually-hidden">2</span>
+            </a>
+            <a class="slider__toggle" href="#">
+              <span class="visually-hidden">3</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -174,36 +198,46 @@
               </tr>
             </table>
         </div>
-        <p class="tariff-rates__toggles slider__toggles">
-          <button class="slider__toggle" type="button">1</button>
-          <button class="slider__toggle" type="button">2</button>
-          <button class="slider__toggle" type="button">3</button>
-        </p>
+        <div class="tariff-rates__toggles slider__toggles">
+          <a class="slider__toggle" href="#">
+            <span class="visually-hidden">1</span>
+          </a>
+          <a class="slider__toggle slider__toggle--active" href="#">
+            <span class="visually-hidden">2</span>
+          </a>
+          <a class="slider__toggle" href="#">
+            <span class="visually-hidden">3</span>
+          </a>
+        </div>
       </div>
     </section>
-  </main>
-  <section class="contacts">
-    <h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
-    <div class="container">
-      <div class="contacts__list">
-        <div class="contact-item">
-          <p class="contact-item__title">Звоните:</p>
-          <p class="contact-item__text">+7 (812) 555-66-66</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-item__title">Пишите:</p>
-          <p class="contact-item__text">mail@htmlacademy.ru</p>
-        </div>
-        <div class="contact-item">
-          <p class="contact-item__title">Приезжайте в гости:</p>
-          <p class="contact-item__text">ул. Большая Конюшенная, 19/8</p>
+    <section class="contacts">
+      <h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
+      <div class="contacts__list-wrapper">
+        <div class="container">
+          <div class="contacts__list">
+            <div class="contact-item">
+              <p class="contact-item__title">Звоните:</p>
+              <p class="contact-item__text">+7 (812) 555-66-66</p>
+            </div>
+            <div class="contact-item">
+              <p class="contact-item__title">Пишите:</p>
+              <p class="contact-item__text">mail@htmlacademy.ru</p>
+            </div>
+            <div class="contact-item">
+              <p class="contact-item__title">Приезжайте в гости:</p>
+              <p class="contact-item__text">ул. Большая Конюшенная, 19/8</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="map">
-      <img class="map__image" src="img/bg-map-mobile@1x.png" alt="Карта" width="320" height="642">
-    </div>
-  </section>
+      <div class="map">
+        <img class="map__image" src="img/bg-map-mobile@1x.png" alt="Карта" width="320" height="642">
+        <div class="map__marker"></div>
+      </div>
+    </section>
+
+  </main>
   <footer class="page-footer page-footer--hidden">
     <div class="container">
       <div class="page-footer__wrapper">

@@ -43,7 +43,7 @@
     <section class="participant-profile">
       <div class="container">
         <p class="participant-profile__suggestion">
-          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
           <span>Пожалуйста, заполните форму ниже:</span>
         </p>
       </div>
@@ -66,64 +66,64 @@
           </fieldset>
         </div>
         <div class="participant-profile__fieldset-wrapper">
-          <fieldset class="form__fieldset">
-            <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
-            <ul class="form__checkbox">
-              <li>
+          <fieldset class="form__fieldset participant-profile__achievements">
+          <legend class="form__legend">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="form__checkbox-items">
+              <li class="form__checkbox-item">
                 <input type="checkbox" name="shark" id="shark" checked>
                 <label for="shark">Сделал селфи с акулой</label>
               </li>
-              <li>
+              <li class="form__checkbox-item">
                 <input type="checkbox" name="burns" id="burns" checked>
                 <label for="burns">Обгорел на пляже</label>
               </li>
-              <li>
+              <li class="form__checkbox-item">
                 <input type="checkbox" name="chuck" id="chuck">
                 <label for="chuck">Видел Чака Норриса</label>
               </li>
-              <li>
+              <li class="form__checkbox-item">
                 <input type="checkbox" name="souvenirs" id="souvenirs">
                 <label for="souvenirs">Накупил сувениров</label>
               </li>
-              <li>
+              <li class="form__checkbox-item">
                 <input type="checkbox" name="tower" id="tower" checked>
                 <label for="tower">Удержал башню</label>
               </li>
-              <li>
+              <li class="form__checkbox-item">
                 <input type="checkbox" name="destroyer" id="destroyer">
                 <label for="destroyer">Разгромил отель</label>
               </li>
             </ul>
           </fieldset>
         </div>
-
         <div class="participant-profile__fieldset-wrapper">
           <fieldset class="form__fieldset participant-profile__contact-info">
             <legend class="form__legend">Контактная информация</legend>
-            <div class="form__text-input">
-              <label for="phone">Номер телефона</label>
-              <input id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
-            </div>
-            <div class="form__text-input">
-              <label for="email">Адрес почты</label>
-              <input id="email" type="email" name="email" placeholder="Введите почту *">
+            <div class="participant-profile__fieldset-content-wrapper">
+              <div class="form__text-input form__text-input--phone">
+                <label for="phone">Номер телефона</label>
+                <input id="phone" type="tel" name="phone" placeholder="Номер, пожалуйста">
+              </div>
+              <div class="form__text-input form__text-input--email">
+                <label for="email">Адрес почты</label>
+                <input id="email" type="email" name="email" placeholder="Введите почту *">
+              </div>
             </div>
           </fieldset>
         </div>
-
         <div class="participant-profile__fieldset-wrapper">
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset participant-profile__application-info">
             <legend class="form__legend">С каким приложением путешествовали?</legend>
-            <ul class="form__radio">
-              <li>
+            <ul class="form__radio-items">
+              <li class="form__radio-item">
                 <input type="radio" name="application" value="0" id="ios" checked>
-                <label for="ios">Pink на iOS</label>
+                <label for="ios">Pink для iOS</label>
               </li>
-              <li>
+              <li class="form__radio-item">
                 <input type="radio" name="application" value="1" id="android">
                 <label for="android">Pink на Android</label>
               </li>
-              <li>
+              <li class="form__radio-item">
                 <input type="radio" name="application" value="2" id="windows-phone">
                 <label for="windows-phone">Windows Phone</label>
               </li>
@@ -132,17 +132,17 @@
         </div>
 
         <div class="participant-profile__fieldset-wrapper">
-          <fieldset class="form__fieldset">
+          <fieldset class="form__fieldset participant-profile__emotions">
             <legend class="form__legend">Опишите свои эмоции</legend>
             <div class="form__text-input">
-              <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              <textarea id="comment" name="comment" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             </div>
           </fieldset>
         </div>
 
         <div class="form__field-wrapper">
           <button class="button button--green" type="submit">Отправить форму</button>
-          <small class="form__notice"><sup>*</sup> - Обязательные поля</small>
+          <small class="form__notice"><strong>*</strong> — обязательные <span>для заполнения</span> поля</small>
         </div>
 
       </form>
@@ -152,7 +152,9 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrapper">
-        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Pink">
+        <a href="index.html">
+          <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Pink">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
