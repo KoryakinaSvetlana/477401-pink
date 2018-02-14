@@ -14,24 +14,22 @@
 }
 
 .contacts__list-wrapper {
+  display: block;
   position: relative;
   margin: 0;
   padding: 0;
-  padding-bottom: 10px;
-  display: block;
+  padding-bottom: 38px;
   background-color: @bg-color-white;
 
   &::after {
     content: "";
-    background-image: url("../img/bg-triangle-white-footer.svg");
+    background-image: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 595 62' preserveAspectRatio='none'%3E%3Cpolygon fill='%23ffffff' points='297.64,61.905 0,0 595.28,0 '/%3E%3C/svg%3E");
     background-position: center top;
     background-repeat: no-repeat;
     position: absolute;
-    height: 62px;
+    height: 35px;
     width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -41px;
+    bottom: -34px;
   }
 }
 
@@ -58,10 +56,11 @@
 
   .contacts__list-wrapper {
     padding-top: 10px;
-    padding-bottom: 35px;
+    padding-bottom: 27px;
 
     &::after {
-      bottom: -61px;
+      height: 69px;
+      bottom: -68px;
     }
   }
 }
@@ -82,10 +81,11 @@
   }
 
   .contacts__list-wrapper {
-    padding-bottom: 47px;
+    padding-bottom: 0;
 
     &::after {
-      bottom: -62px;
+      height: 106px;
+      bottom: -106px;
     }
   }
 }

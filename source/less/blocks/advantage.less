@@ -18,21 +18,6 @@
     background-repeat: no-repeat;
     z-index: 0;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    height: 17px;
-    width: 294px;
-    margin: 0 auto;
-    display: none;
-    left: 0;
-    right: 0;
-    background-image: url("../img/phone-shadow.png");
-    background-position: center center;
-    background-repeat: no-repeat;
-    z-index: 1;
-  }
 }
 
 .advantage__content-wrapper {
@@ -80,20 +65,51 @@
 
     &::after {
       display: block;
-      width: 186px;
-      height: 382px;
-      top: -300px;
-      background-image: url("../img/iphone-screen-desktop@1x.png");
-    }
+      width: 292px;
+      height: 302px;
+      left: 7px;
+      top: -301px;
+      background-image: url("../img/iphone-screen-1-desktop@1x.png");
 
-    &::before {
-      display: block;
-      top: -9px;
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/iphone-screen-1-desktop@2x.png");
+        background-size: contain;
+      }
     }
 
     &:first-child {
+      &::after {
+        left: 5px;
+      }
+    }
+
+    &:nth-child(2) {
       .advantage__content-wrapper {
-        padding: 38px 25px 10px 30px;
+        padding: 39px 25px 10px 24px;
+      }
+
+      &::after {
+        background-image: url("../img/iphone-screen-2-desktop@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/iphone-screen-2-desktop@2x.png");
+          background-size: contain;
+        }
+      }
+    }
+
+    &:last-child {
+      .advantage__content-wrapper {
+        padding: 39px 24px 10px 25px;
+      }
+
+      &::after {
+        background-image: url("../img/iphone-screen-3-desktop@1x.png");
+
+        @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+          background-image: url("../img/iphone-screen-3-desktop@2x.png");
+          background-size: contain;
+        }
       }
     }
   }
@@ -115,6 +131,6 @@
   }
 
   .advantage__content-wrapper {
-    padding: 38px 30px 10px 25px;
+    padding: 39px 24px 10px 32px;
   }
 }

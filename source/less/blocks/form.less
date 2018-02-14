@@ -13,6 +13,8 @@
 }
 
 .form__legend {
+  width: 100%;
+  display: block;
   padding: 0 23px 38px 20px;
   font-size: 14px;
   line-height: 18px;
@@ -20,6 +22,7 @@
   text-transform: uppercase;
   color: @font-color-red;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .form__text-input {
@@ -48,7 +51,7 @@
     width: 100%;
     padding: 15px 19px 15px 19px;
     resize: vertical;
-    min-height: 200px;
+    min-height: 202px;
   }
 
   input,
@@ -150,6 +153,7 @@
     font-size: 18px;
     font-weight: normal;
     color: @font-color-gray;
+    white-space: nowrap;
     cursor: pointer;
 
     &:hover {
@@ -207,10 +211,11 @@
 }
 
 .form__field-wrapper {
+  margin: 0 auto;
+  margin-top: -3px;
   padding-left: 20px;
   padding-right: 20px;
   width: 280px;
-  margin: 0 auto;
   text-align: center;
 }
 
@@ -230,12 +235,18 @@
   .form__field-wrapper {
     display: flex;
     justify-content: space-between;
+    padding-top: 4px;
+    padding-bottom: 34px;
     width: 620px;
     order: 5;
   }
 
   .form__legend {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0 25px 0 25px;
+    white-space: nowrap;
   }
 
   .form__text-input {
@@ -304,17 +315,15 @@
 
   .form__field-wrapper {
     width: 940px;
+    margin-top: -5px;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 0;
   }
 
   .form__fieldset {
-    width: initial;
+    width: 100%;
     padding: 30px 60px 30px 60px;
-  }
-
-  .form__legend {
-    white-space: nowrap;
   }
 
   .form__text-input {
@@ -334,7 +343,7 @@
 
   .form__checkbox-items {
     column-count: 3;
-    column-gap: 97px;
+    column-gap: 37px;
   }
 
   .form__checkbox-item {

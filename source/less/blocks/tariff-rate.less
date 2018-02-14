@@ -23,7 +23,7 @@
   }
 
   tr {
-    height: 62px;
+    height: 61px;
 
     &:first-child {
       height: 98px;
@@ -115,19 +115,19 @@
 
 .tafiff-rate__first-column {
   position: absolute;
-  left: ~"calc(100vw / 2 - 280px / 2 - 280px)";
+  left: ~"calc(100vw / 2 - 280px / 2 - 280px + 1px)";
   width: 280px;
 }
 
 .tafiff-rate__second-column {
   position: absolute;
-  left: ~"calc(100vw / 2 - 280px / 2)";
+  left: ~"calc(100vw / 2 - 280px / 2 + 1px)";
   width: 280px;
 }
 
 .tafiff-rate__third-column {
   position: absolute;
-  left: ~"calc(100vw / 2 - 280px / 2 + 280px)";
+  left: ~"calc(100vw / 2 - 280px / 2 + 280px + 1px)";
   width: 280px;
 }
 
@@ -137,7 +137,7 @@
 
     td {
       width: 25%;
-      padding: 10px 15px 8px 15px;
+      padding: 9px 15px 9px 14px;
       text-transform: none;
     }
 
@@ -147,7 +147,11 @@
     }
 
     tr {
-      width: initial;
+      height: initial;
+
+      &:first-child {
+        height: 79px;
+      }
     }
   }
 
@@ -193,7 +197,7 @@
 
 @media (min-width: @desktop-width) {
   .tariff-rate {
-    margin-left: -2px;
+    margin-left: 0;
 
     td {
       width: 25%;

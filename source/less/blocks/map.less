@@ -22,7 +22,7 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 61px;
+  bottom: 69px;
   width: 36px;
   height: 36px;
   background-image: url("../img/icon-map-marker.svg");
@@ -32,7 +32,11 @@
 
 @media (min-width: @tablet-width) {
   .map {
-    height: 365px;
+    height: 374px;
+  }
+
+  .map__image {
+    bottom: -111px;
   }
 
   .map__marker {
@@ -43,10 +47,14 @@
 @media (min-width: @desktop-width) {
   .map {
     margin-top: -50px;
-    height: 505px;
+    height: 555px;
+  }
+
+  .map__image {
+    bottom: -198px;
   }
 
   .map__marker {
-    bottom: 203px;
+    bottom: 201px;
   }
 }
