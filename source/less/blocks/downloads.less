@@ -22,7 +22,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
-    top: -314px;
+    top: -313px;
     left: -20px;
     z-index: -1;
 
@@ -45,15 +45,25 @@
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  color: #ffffff;
+  color: @font-color-white;
   text-align: center;
   padding: 15px 0 16px 0;
   display: inline-block;
   background-color: transparent;
-  border: 3px solid #ffffff;
+  border: 3px solid @border-color-white;
   border-radius: 30px;
   width: 280px;
   box-sizing: border-box;
+
+  &:hover {
+    color: @font-color-red;
+    background-color: @bg-color-white;
+  }
+
+  &:active {
+    color: rgba(210, 40, 86, 0.3);
+    background-color: @bg-color-white;
+  }
 }
 
 .downloads__description {
@@ -101,7 +111,7 @@
   .downloads__moto {
     display: block;
     margin: 0;
-    padding: 10px 30px 30px 30px;
+    padding: 10px 30px 31px 30px;
     line-height: 48px;
   }
 

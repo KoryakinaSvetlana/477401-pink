@@ -66,15 +66,25 @@
     padding-bottom: 0;
     border: none;
     margin-left: 79px;
+    min-height: 33px;
+    height: 33px;
 
     &:nth-child(2) {
       margin-left: 81px;
     }
-  }
 
-  .menu-list__item a {
-    font-weight: normal;
-    line-height: 18px;
-    text-transform: none;
+    a {
+      font-weight: normal;
+      line-height: 18px;
+      text-transform: none;
+
+      &:active {
+        color: @font-color-white;
+      }
+    }
+
+    &--active {
+      border-bottom: 2px solid @border-color-white;
+    }
   }
 }

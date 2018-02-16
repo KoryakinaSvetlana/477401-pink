@@ -29,29 +29,27 @@
     margin-right: 10px;
   }
 
-  input {
-    display: none;
-    position: absolute;
-    left: 4px;
-    bottom: 52px;
-    width: 250px;
-    margin: 10px;
-    box-sizing: border-box;
+  &:hover {
+    .add-photo__tool-item-icon {
+      fill: @bg-color-hover-gray;
+    }
   }
 
   &--active {
+    cursor: default;
+
     .add-photo__tool-item-icon {
       fill: @bg-color-red;
     }
 
-    input {
+    .add-photo__tool-item-range {
       display: block;
     }
-  }
 
-  &:hover {
-    .add-photo__tool-item-icon {
-      fill: @bg-color-hover-gray;
+    &:hover {
+      .add-photo__tool-item-icon {
+        fill: @bg-color-red;
+      }
     }
   }
 }
@@ -61,11 +59,15 @@
 }
 
 .add-photo__tool-item-range {
+  display: none;
+  position: absolute;
+  left: 4px;
+  bottom: 52px;
+  width: 250px;
+  margin: 0;
+  padding: 10px 5px 10px 5px;
   background-color: transparent;
   appearance: none;
-  margin: 10px 0;
-  padding: 10px 5px 10px 5px;
-  width: 100%;
 
   &:focus {
     outline: none;
@@ -104,6 +106,8 @@
     cursor: pointer;
     appearance: none;
     margin-top: -6px;
+    line-height: 16px;
+    vertical-align: middle;
     box-sizing: border-box;
   }
 
@@ -137,17 +141,14 @@
 
   &::-ms-fill-lower {
     background: @bg-color-gray;
-    border: 0 solid #000101;
-    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
   }
 
   &::-ms-fill-upper {
     background: @bg-color-gray;
-    border: 0 solid #000101;
-    box-shadow: 0 0 0 #000000, 0 0 0 #0d0d0d;
   }
 
   &::-ms-thumb {
+    margin-top: auto;
     border: 2px solid @border-color-red;
     height: 14px;
     width: 14px;
@@ -240,12 +241,6 @@
     box-sizing: border-box;
     cursor: default;
 
-    input {
-      display: block;
-      position: static;
-      width: 210px;
-    }
-
     &:first-child {
       height: 71px;
       padding: 5px 3px 5px 3px;
@@ -262,6 +257,12 @@
         fill: @bg-color-red;
       }
     }
+  }
+
+  .add-photo__tool-item-range {
+    display: block;
+    position: static;
+    width: 210px;
   }
 
   .add-photo__header-wrapper {
@@ -370,10 +371,6 @@
   .add-photo__tool-item {
     padding: 7px 15px 5px 5px;
 
-    input {
-      width: 300px;
-    }
-
     &:first-child {
       padding: 7px 15px 5px 0;
     }
@@ -381,5 +378,9 @@
     &:nth-child(2) {
       padding: 10px 15px 5px 0;
     }
+  }
+
+  .add-photo__tool-item-range {
+    width: 300px;
   }
 }

@@ -26,13 +26,23 @@
     .main-navigation__list {
       display: none;
     }
+
+    .main-navigation__toggle {
+      margin-top: 0;
+      margin-right: 0;
+    }
   }
+}
+
+.main-navigation__toggle-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation__toggle {
   margin: 0;
-  margin-top: -3px;
-  margin-right: 0;
+  margin-top: 1px;
+  margin-right: -1px;
   padding: 0;
   border: none;
   text-align: right;
@@ -68,11 +78,17 @@
   .main-navigation {
     padding-top: 25px;
     min-height: 109px;
+
+    &--closed {
+      .main-navigation__toggle {
+        margin-top: 18px;
+      }
+    }
   }
 
   .main-navigation__toggle {
-    margin-top: 0;
     margin-right: 0;
+    margin-top: 20px;
     padding-bottom: 5px;
   }
 }

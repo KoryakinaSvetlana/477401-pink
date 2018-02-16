@@ -32,6 +32,24 @@
   color: @font-color-red;
 }
 
+.contact-item__email {
+  color: @font-color-red;
+
+  &:hover {
+    color: @font-color-gray;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: @font-color-red;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .contact-item {
     width: 300px;
