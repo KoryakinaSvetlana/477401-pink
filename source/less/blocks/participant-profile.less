@@ -49,7 +49,7 @@
 
 .participant-profile__emotions {
   legend {
-    padding: 9px 18px 15px 15px;
+    padding: 8px 18px 15px 16px;
   }
 }
 
@@ -72,7 +72,7 @@
   .participant-profile__fieldset-wrapper {
     &:nth-child(2n) {
       padding: 0;
-      background-color: initial;
+      background-color: @bg-color-white;
     }
 
     &:first-child {
@@ -182,6 +182,7 @@
     margin-top: -15px;
 
     legend {
+      margin-left: -35px;
       padding: 0 15px 0 15px;
     }
   }
@@ -197,8 +198,10 @@
   .participant-profile__fieldset-wrapper {
     padding: 0;
     box-sizing: border-box;
+    flex: 1 0 auto;
 
     &:first-child {
+      margin-right: 70px;
       width: 435px;
     }
 
@@ -220,7 +223,7 @@
   }
 
   .participant-profile__achievements {
-    padding: 45px 60px 25px 59px;
+    padding: 45px 0 25px 59px;
     margin-bottom: 24px;
   }
 

@@ -6,7 +6,11 @@
   margin-bottom: 20px;
 
   &:nth-child(2) {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -26,6 +30,24 @@
   font-weight: 300;
   text-align: center;
   color: @font-color-red;
+}
+
+.contact-item__email {
+  color: @font-color-red;
+
+  &:hover {
+    color: @font-color-gray;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: rgba(40, 54, 69, 0.3);
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: @font-color-red;
+  }
 }
 
 @media (min-width: @tablet-width) {

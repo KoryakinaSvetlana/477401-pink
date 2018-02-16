@@ -10,7 +10,8 @@
     height: 70px;
     width: 100%;
     bottom: -70px;
-    background-image: url("../img/bg-triangle-white.svg");
+    background-image: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='1200px' height='94.074px' viewBox='0 0 1200 94.074' preserveAspectRatio='none'%3E%3Cpolygon fill='%23ffffff' points='1200,0 0,0 0,94.074 '/%3E%3C/svg%3E");
+    background-size: 100% 100%;
     background-position: left bottom;
     background-repeat: no-repeat;
   }
@@ -75,12 +76,17 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding-bottom: 11px;
+    padding-bottom: 8px;
+
+    &::before {
+      height: 82px;
+      bottom: -81px;
+    }
   }
 
   .reviews__list {
     position: relative;
-    padding: 167px 120px 23px 115px;
+    padding: 167px 120px 15px 120px;
 
     &::before {
       content: "";
@@ -88,9 +94,9 @@
       margin: 0 auto;
       width: 79px;
       height: 64px;
-      left: 0;
+      left: 5px;
       right: 0;
-      top: 70px;
+      top: 72px;
       background-image: url("../img/quotes.svg");
       background-repeat: no-repeat;
       background-position: center center;

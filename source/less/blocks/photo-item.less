@@ -7,12 +7,28 @@
 
   &--panorama {
     margin-bottom: 21px;
+
+    picture {
+      line-height: 0;
+    }
   }
 
   a {
     margin: 0;
     padding: 0;
     line-height: 0;
+  }
+
+  &:first-child {
+    .photo-item__likes {
+      margin-top: 9px;
+    }
+  }
+
+  &:nth-child(3) {
+    .photo-item__likes {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -36,7 +52,7 @@
     text-transform: uppercase;
     color: @font-color-white;
     width: 140px;
-    height: 37px;
+    height: 36px;
     background-color: @bg-color-red;
     z-index: 1;
   }
@@ -51,7 +67,6 @@
   box-sizing: border-box;
 
   .likes {
-    margin-top: 11px;
     order: 3;
   }
 
@@ -109,10 +124,6 @@
 
 @media (min-width: @tablet-width) {
   .photo-item__image {
-    &--panorama {
-      height: 510px;
-    }
-
     &--block {
       width: 300px;
       height: 300px;
@@ -124,7 +135,7 @@
 
     &::before {
       right: 20px;
-      top: 58px;
+      top: 57px;
     }
   }
 
@@ -133,13 +144,29 @@
     flex-direction: column;
 
     &--panorama {
-      margin-bottom: 50px;
+      margin-bottom: 52px;
 
       .photo-item__content-wrapper {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
+      }
+
+      picture {
+        line-height: 0;
+      }
+    }
+
+    &:first-child {
+      .photo-item__likes {
+        margin-top: auto;
+      }
+    }
+
+    &:nth-child(3) {
+      .photo-item__likes {
+        margin-top: auto;
       }
     }
   }
@@ -159,10 +186,11 @@
     }
 
     &--panorama {
-      width: initial;
-      min-height: initial;
+      width: auto;
+      min-height: auto;
 
-      .likes {
+      .photo-item__likes {
+        margin-right: -7px;
         margin-top: 0;
         order: 2;
 
@@ -181,6 +209,14 @@
 
     &--panorama {
       margin-bottom: 50px;
+
+      .photo-item__likes {
+        margin-right: 0;
+      }
+
+      picture {
+        line-height: 0;
+      }
     }
   }
 

@@ -1,69 +1,90 @@
 .menu-list {
   .reset-list();
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70px;
   background-color: @bg-menu-color-darkgray;
-  display: none;
-
-  &--opened {
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 70px;
-  }
-}
-
-.menu-list__item a {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 32px;
-  color: #ffffff;
-
-  &:hover {
-    color: #d22856;
-  }
-
-  &:active {
-    color: #d22856;
-    opacity: 0.3;
-  }
 }
 
 .menu-list__item {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  min-height: 64px;
   text-align: center;
   border-top: 1px solid @border-color-gray;
   border-bottom: 1px solid @border-color-black;
+  box-sizing: border-box;
+
+  a {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    text-transform: uppercase;
+    color: @font-color-white;
+
+    &:hover {
+      color: @font-color-red;
+    }
+
+    &:active {
+      color: @font-color-red;
+      opacity: 0.3;
+    }
+  }
+
+  &--active {
+    a {
+      &:hover {
+        color: @font-color-white;
+      }
+
+      &:active {
+        color: @font-color-white;
+      }
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .menu-list {
-    &--opened {
-      top: 110px;
-    }
+    top: 109px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .menu-list {
     display: flex;
+    position: static;
     justify-content: space-between;
+    padding-top: 20px;
     background-color: transparent;
-
-    &--opened {
-      position: static;
-    }
   }
 
   .menu-list__item {
     padding-top: 0;
     padding-bottom: 0;
     border: none;
-    margin-left: 80px;
-  }
+    margin-left: 79px;
+    min-height: 33px;
+    height: 33px;
 
-  .menu-list__item a {
-    font-weight: normal;
-    line-height: 18px;
+    &:nth-child(2) {
+      margin-left: 81px;
+    }
+
+    a {
+      font-weight: normal;
+      line-height: 18px;
+      text-transform: none;
+
+      &:active {
+        color: @font-color-white;
+      }
+    }
+
+    &--active {
+      border-bottom: 2px solid @border-color-white;
+    }
   }
 }

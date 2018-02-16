@@ -1,31 +1,110 @@
 .main-navigation {
-  padding: 0;
+  position: relative;
   margin: 0;
-  margin-top: 20px;
+  padding: 0;
+  padding-top: 20px;
+  background-color: @bg-menu-color-darkgray;
+  border-bottom: 1px solid @border-color-black;
+  min-height: 70px;
+  box-sizing: border-box;
+
+  &--closed {
+    min-height: 66px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+
+    .main-navigation__toggle-icon {
+      &--closed {
+        display: inline-block;
+      }
+
+      &--opened {
+        display: none;
+      }
+    }
+
+    .main-navigation__list {
+      display: none;
+    }
+
+    .main-navigation__toggle {
+      margin-top: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.main-navigation__toggle-wrapper {
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation__toggle {
-  width: 50px;
-  height: 24px;
+  margin: 0;
+  margin-top: 1px;
+  margin-right: -1px;
+  padding: 0;
   border: none;
-  background-image: url("../img/icon-menu-burger.svg");
+  text-align: right;
   background-color: transparent;
-  background-position: center center;
-  background-repeat: no-repeat;
+  outline: none;
+  cursor: pointer;
+  flex: 1 0 auto;
+
+  &:hover {
+    .main-navigation__toggle-icon {
+      fill: @bg-color-red;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.main-navigation__toggle-icon {
+  fill: @bg-color-white;
+
+  &--closed {
+    display: none;
+  }
 
   &--opened {
-    width: 24px;
-    background-image: url("../img/icon-menu-cross.svg");
+    display: inline-block;
   }
 }
 
 @media (min-width: @tablet-width) {
   .main-navigation {
-    margin-top: 45px;
+    padding-top: 25px;
+    min-height: 109px;
+
+    &--closed {
+      .main-navigation__toggle {
+        margin-top: 18px;
+      }
+    }
+  }
+
+  .main-navigation__toggle {
+    margin-right: 0;
+    margin-top: 20px;
+    padding-bottom: 5px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-navigation {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+
+    &--closed {
+      .main-navigation__list {
+        display: flex;
+      }
+    }
+  }
+
   .main-navigation__toggle {
     display: none;
   }

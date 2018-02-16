@@ -9,16 +9,36 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper">
+    <nav class="main-navigation">
       <div class="container container--flex">
         <div class="logo">
-          <img class="logo__image logo__image--mobile" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Pink">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+              <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+            </picture>
         </div>
-        <nav class="main-navigation">
+        <div class="main-navigation__toggle-wrapper">
           <button class="main-navigation__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
+            <span class="visually-hidden">Открыть/Закрыть меню</span>
+            <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--opened" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
+              <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
+            </svg>
+            <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--closed" x="0px" y="0px" width="50px" height="27px" viewBox="0 0 50 24">
+              <g id="miu">
+                <g id="editor_list_view_hambuger_menu_glyph">
+                  <g>
+                    <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                  </g>
+                  <g>
+                    <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
           </button>
-          <ul class="main-navigation__list menu-list">
+        </div>
+        <ul class="main-navigation__list menu-list">
             <li class="menu-list__item menu-list__item--active">
               <a>Главная</a>
             </li>
@@ -32,9 +52,8 @@
               <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
             </li>
           </ul>
-        </nav>
       </div>
-    </div>
+    </nav>
     <section class="downloads">
       <div class="container">
         <div class="downloads__box">
@@ -222,7 +241,9 @@
             </div>
             <div class="contact-item">
               <p class="contact-item__title">Пишите:</p>
-              <p class="contact-item__text">mail@htmlacademy.ru</p>
+              <p class="contact-item__text">
+                <a class="contact-item__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </p>
             </div>
             <div class="contact-item">
               <p class="contact-item__title">Приезжайте в гости:</p>
@@ -232,16 +253,18 @@
         </div>
       </div>
       <div class="map">
-        <img class="map__image" src="img/bg-map-mobile@1x.png" alt="Карта" width="320" height="642">
-        <div class="map__marker"></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123993!2d30.320894616117073!3d59.9387968690479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1518783213592" width="320" height="200" allowfullscreen></iframe>
+        <!--<div class="map__marker"></div>-->
       </div>
     </section>
-
   </main>
   <footer class="page-footer page-footer--hidden">
     <div class="container">
       <div class="page-footer__wrapper">
-        <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" width="146" height="40" alt="Pink">
+        <picture>
+          <source class="page-footer__logo" media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+          <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Pink">
+        </picture>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
@@ -281,5 +304,11 @@
       </div>
     </div>
   </footer>
+<script>
+// Picture element HTML5 shiv
+  document.createElement( "picture" );
+</script>
+<script src="js/picturefill.js" async></script>
+<script src="js/script.js" async></script>
 </body>
 </html>
