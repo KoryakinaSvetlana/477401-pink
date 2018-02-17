@@ -31,7 +31,7 @@
             <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--opened" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
               <use xlink:href="#icon-menu-cross"></use>
             </svg>
-            <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--closed" x="0px" y="0px" width="50px" height="25px" viewBox="0 0 50 26">
+            <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--closed" x="0px" y="0px" width="50px" height="27px" viewBox="0 0 50 26">
               <use xlink:href="#icon-menu-burger"></use>
             </svg>
           </button>
@@ -63,13 +63,13 @@
       <!--Панорама-->
       <div class="photo-item photo-item--panorama">
         <div class="photo-item__image-title"></div>
-        <picture>
-          <source class="photo-item__image photo-item__image--panorama" type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
-          <source class="photo-item__image photo-item__image--panorama" type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
-          <source class="photo-item__image photo-item__image--panorama" type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
+        <picture class="photo-item__image photo-item__image--panorama">
+          <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
 
-          <source class="photo-item__image photo-item__image--panorama" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
-          <source class="photo-item__image photo-item__image--panorama" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+          <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
           <img class="photo-item__image photo-item__image--panorama" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
         </picture>
         <div class="container">
