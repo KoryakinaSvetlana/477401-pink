@@ -14,17 +14,25 @@
   color: @font-color-gray;
 }
 
+.copyright__link-icon {
+  fill: @border-color-red;
+}
+
 .copyright__link {
   position: relative;
+  top: -7px;
 
-  &::before {
-    content: "";
-    background-image: url("../img/logo-htmlacademy.svg");
-    position: absolute;
-    height: 34px;
-    width: 27px;
-    right: 0;
-    top: -5px;
+  &:hover {
+    .copyright__link-icon {
+      fill: @border-color-darkgray;
+    }
+  }
+
+  &:active {
+    .copyright__link-icon {
+      fill: @border-color-darkgray;
+      opacity: 0.3;
+    }
   }
 }
 
@@ -40,5 +48,9 @@
     font-size: 18px;
     font-weight: normal;
     margin-right: 10px;
+  }
+
+  .copyright__link {
+    top: -5px;
   }
 }
