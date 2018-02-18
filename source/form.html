@@ -4,39 +4,35 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="/fonts/opensans.woff2" as="font">
+  <link rel="preload" href="/fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="/fonts/opensanslight.woff2" as="font">
   <title>Конкурс</title>
 </head>
 <body class="page page--inner">
+  <!--SVG Sprite-->
+  <div style="display:none">
+    <include src="build/img/sprite.svg"></include>
+  </div>
   <header class="page-header">
     <nav class="main-navigation">
       <div class="container container--flex">
-        <a href="index.html">
-          <div class="logo">
-            <picture>
-              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-              <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-              <img src="img/logo-pink-white-mobile.svg" alt="Pink">
-            </picture>
-          </div>
+        <a class="logo" href="index.html">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" alt="Pink">
+          </picture>
         </a>
         <div class="main-navigation__toggle-wrapper">
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Открыть/Закрыть меню</span>
             <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--opened" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24">
-              <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
+              <use xlink:href="#icon-menu-cross"></use>
             </svg>
-            <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--closed" x="0px" y="0px" width="50px" height="27px" viewBox="0 0 50 24">
-              <g id="miu">
-                <g id="editor_list_view_hambuger_menu_glyph">
-                  <g>
-                    <path id="path-1" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
-                  </g>
-                  <g>
-                    <path id="path-1_1_" d="M1.137,0C0.51,0,0,0.428,0,1.01v1.981c0,0.558,0.494,1.01,1.139,1.01h47.671 c0.628,0,1.138-0.428,1.138-1.01V1.01c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,10.003C0.51,10.003,0,10.431,0,11.013v1.98 c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01v-1.98c0-0.558-0.494-1.01-1.138-1.01H1.137z M1.137,20.005C0.51,20.005,0,20.434,0,21.016v1.981c0,0.557,0.494,1.01,1.139,1.01h47.671c0.628,0,1.138-0.428,1.138-1.01 v-1.981c0-0.558-0.494-1.011-1.138-1.011H1.137z"/>
-                  </g>
-                </g>
-              </g>
+            <svg class="main-navigation__toggle-icon main-navigation__toggle-icon--closed" x="0px" y="0px" width="50px" height="27px" viewBox="0 0 50 26">
+              <use xlink:href="#icon-menu-burger"></use>
             </svg>
           </button>
         </div>
@@ -171,47 +167,39 @@
   <footer class="page-footer">
     <div class="container">
       <div class="page-footer__wrapper">
-        <a href="index.html">
-          <picture>
-            <source class="page-footer__logo" media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-            <img class="page-footer__logo" src="img/logo-pink-blue-mobile.svg" alt="Pink">
+        <a class="page-footer__logo" href="index.html">
+          <picture >
+            <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+            <img src="img/logo-pink-blue-mobile.svg" alt="Pink">
           </picture>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link" href="https://twitter.com/htmlacademy_ru">
+              <a class="social__link social__link--twitter" href="https://twitter.com/htmlacademy_ru">
                 <span class="visually-hidden">Мы в Twitter</span>
-                <svg class="social__link--twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-                  <g id="W6EeEF_1_">
-                    <g>
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
-                    </g>
-                  </g>
-                </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.facebook.com/htmlacademy">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
                 <span class="visually-hidden">Мы в Фейсбуке</span>
-                <svg class="social__link--facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
-                  <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
-                </svg>
               </a>
             </li>
             <li class="social__item">
-              <a class="social__link" href="https://www.instagram.com/htmlacademy">
+              <a class="social__link social__link--youtube" href="https://www.instagram.com/htmlacademy">
                 <span class="visually-hidden">Мы в YouTube</span>
-                <svg class="social__link--youtube" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
-                  <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
-                </svg>
               </a>
             </li>
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+            <svg class="copyright__link-icon" width="27px" height="34px" viewBox="0 0 27 34" preserveAspectRatio="none">
+              <use xlink:href="#logo-htmlacademy"></use>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
@@ -225,7 +213,7 @@
       <p>
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="button button--green button-close" type="button">OK</button>
+      <button class="button button--green" type="button">OK</button>
     </div>
   </section>
 
@@ -237,7 +225,7 @@
       </p>
     </div>
     <div class="modal-confirmed__wrapper">
-      <button class="button button--green button-close" type="button">Закрыть окно</button>
+      <button class="button button--green" type="button">Закрыть окно</button>
     </div>
   </section>
 
@@ -245,7 +233,7 @@
   // Picture element HTML5 shiv
     document.createElement( "picture" );
   </script>
-  <script src="js/picturefill.js" async></script>
-  <script src="js/script.js" async></script>
+  <script src="js/picturefill.min.js" async></script>
+  <script src="js/script.min.js" async></script>
 </body>
 </html>

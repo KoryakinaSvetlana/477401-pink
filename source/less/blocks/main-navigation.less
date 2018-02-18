@@ -37,6 +37,8 @@
 .main-navigation__toggle-wrapper {
   margin: 0;
   padding: 0;
+  text-align: right;
+  flex: 1 0 auto;
 }
 
 .main-navigation__toggle {
@@ -45,11 +47,9 @@
   margin-right: -1px;
   padding: 0;
   border: none;
-  text-align: right;
   background-color: transparent;
   outline: none;
   cursor: pointer;
-  flex: 1 0 auto;
 
   &:hover {
     .main-navigation__toggle-icon {
@@ -101,6 +101,7 @@
     &--closed {
       .main-navigation__list {
         display: flex;
+        flex-wrap: wrap;
       }
     }
   }
