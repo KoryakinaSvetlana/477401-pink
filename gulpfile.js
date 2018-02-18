@@ -62,26 +62,26 @@ gulp.task("webp", function () {
 /*SVG Sprite*/
 gulp.task("sprite", function () {
   return gulp.src(["source/img/logo-htmlacademy.svg",
-                  "source/img/left-arrow.svg",
-                  "source/img/right-arrow.svg",
-                  "source/img/icon-editor-crop.svg",
-                  "source/img/icon-editor-fill.svg",
-                  "source/img/icon-editor-contrast.svg",
-                  "source/img/icon-menu-burger.svg",
-                  "source/img/icon-menu-cross.svg"])
-             .pipe(svgstore({inlineSvg: true}))
-             .pipe(rename("sprite.svg"))
-             .pipe(gulp.dest("build/img"));
+      "source/img/left-arrow.svg",
+      "source/img/right-arrow.svg",
+      "source/img/icon-editor-crop.svg",
+      "source/img/icon-editor-fill.svg",
+      "source/img/icon-editor-contrast.svg",
+      "source/img/icon-menu-burger.svg",
+      "source/img/icon-menu-cross.svg"])
+    .pipe(svgstore({inlineSvg: true}))
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"));
 });
 
 /*PostHtml*/
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-             .pipe(posthtml([
-               include()
-             ]))
-             .pipe(htmlmin({collapseWhitespace: true}))
-             .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest("build"));
 });
 
 /*Copy*/
@@ -93,7 +93,7 @@ gulp.task("copy", function () {
              ], {
              base: "source"
              })
-             .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
 });
 
 /*Clean*/
