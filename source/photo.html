@@ -37,19 +37,19 @@
           </button>
         </div>
         <ul class="main-navigation__list menu-list">
-            <li class="menu-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="menu-list__item menu-list__item--active">
-              <a>Фотографии</a>
-            </li>
-            <li class="menu-list__item">
-              <a href="form.html">Конкурс</a>
-            </li>
-            <li class="menu-list__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-            </li>
-          </ul>
+          <li class="menu-list__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="menu-list__item menu-list__item--active">
+            <a>Фотографии</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="menu-list__item">
+            <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </li>
+        </ul>
       </div>
     </nav>
     <h1 class="page-header__title">Фотографии<br> пользователей</h1>
@@ -62,7 +62,9 @@
       </div>
       <!--Панорама-->
       <div class="photo-item photo-item--panorama">
-        <div class="photo-item__image-title"></div>
+        <div class="container">
+          <div class="photo-item__image-title">Панорама дня</div>
+        </div>
         <picture class="photo-item__image photo-item__image--panorama">
           <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
@@ -266,7 +268,7 @@
               </ul>
               <div class="add-photo__button-wrapper">
                 <button class="button button--enabled" type="submit">Запостить</button>
-                <button class="button button--desabled" type="reset">Отмена</button>
+                <button class="button button--disabled" type="reset">Отмена</button>
               </div>
             </div>
           </div>

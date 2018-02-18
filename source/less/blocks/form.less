@@ -256,16 +256,23 @@
 
     &--email,
     &--phone {
+      input {
+        position: relative;
+        z-index: 2;
+        background-color: transparent;
+      }
+
       &::before {
         content: "";
         position: absolute;
         width: 60px;
-        height: 59px;
+        height: 61px;
         right: 2px;
         top: 2px;
-        background-color: @border-color-lightgray;
-        background-position: center center;
+        background-position: top 20px center;
         background-repeat: no-repeat;
+        background-color: @border-color-lightgray;
+        z-index: 1;
       }
     }
 

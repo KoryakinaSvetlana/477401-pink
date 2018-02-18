@@ -69,9 +69,9 @@ gulp.task("sprite", function () {
                   "source/img/icon-editor-contrast.svg",
                   "source/img/icon-menu-burger.svg",
                   "source/img/icon-menu-cross.svg"])
-            .pipe(svgstore({inlineSvg: true}))
-            .pipe(rename("sprite.svg"))
-            .pipe(gulp.dest("build/img"));
+             .pipe(svgstore({inlineSvg: true}))
+             .pipe(rename("sprite.svg"))
+             .pipe(gulp.dest("build/img"));
 });
 
 /*PostHtml*/
