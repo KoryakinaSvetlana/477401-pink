@@ -229,7 +229,17 @@
 
   .participant-profile__fieldset-content-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .form__text-input {
+      width: 375px;
+      margin-right: 70px;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
   }
 
   .participant-profile__emotions {

@@ -32,6 +32,13 @@
   }
 }
 
+.photo-item__image-title-wrapper {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  width: 280px;
+}
+
 .photo-item__image-title {
   position: absolute;
   right: 0;
@@ -122,6 +129,10 @@
     }
   }
 
+  .photo-item__image-title-wrapper {
+    width: 620px;
+  }
+
   .photo-item__image-title {
     top: 57px;
   }
@@ -129,9 +140,11 @@
   .photo-item {
     display: flex;
     flex-direction: column;
+    margin-right: 20px;
 
     &--panorama {
       margin-bottom: 52px;
+      margin-right: 0;
 
       .photo-item__content-wrapper {
         display: flex;
@@ -155,6 +168,10 @@
       .photo-item__likes {
         margin-top: auto;
       }
+    }
+
+    &:nth-child(2n) {
+      margin-right: 0;
     }
   }
 
@@ -205,6 +222,20 @@
         line-height: 0;
       }
     }
+
+    &:nth-child(2n) {
+      margin-right: 20px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .photo-item__image-title-wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 940px;
   }
 
   .photo-item__image-title {

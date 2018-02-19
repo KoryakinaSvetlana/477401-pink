@@ -48,20 +48,19 @@
 
 .advantages__white-wrapper {
   position: relative;
-  padding: 0;
   margin: 0;
+  padding: 39px 0 33px 0;
   background-color: @bg-color-white;
-  padding-top: 39px;
 
   &::before {
     content: "";
     position: absolute;
-    height: 65px;
+    height: 32px;
     width: 100%;
     left: 0;
-    bottom: -64px;
+    bottom: -31px;
     z-index: 1;
-    background-image: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='1200px' height='94.074px' viewBox='0 0 1200 94.074' preserveAspectRatio='none'%3E%3Cpolygon fill='%23ffffff' points='1200,0 0,0 0,94.074 '/%3E%3C/svg%3E");
+    background-image: url("../img/bg-triangle-white.svg");
     background-size: 100% 100%;
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -81,14 +80,14 @@
 }
 
 .advantages__list {
-  padding: 96px 0 286px 0;
+  padding: 63px 0 287px;
 
   &::after {
     content: "";
     position: absolute;
-    height: 275px;
+    height: 278px;
     width: 157px;
-    bottom: 1px;
+    bottom: 0;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -106,11 +105,11 @@
 @media (min-width: @tablet-width) {
   .advantages__white-wrapper {
     padding-top: 0;
-    padding-bottom: 9px;
+    padding-bottom: 47px;
 
     &::before {
-      height: 90px;
-      bottom: -89px;
+      height: 50px;
+      bottom: -49px;
     }
   }
 
@@ -175,7 +174,7 @@
   }
 
   .advantages__list {
-    padding: 94px 0 7px 306px;
+    padding: 56px 0 7px 306px;
 
     &::after {
       margin: 0;
@@ -203,7 +202,7 @@
 @media (min-width: @desktop-width) {
   .advantages__white-wrapper {
     padding-top: 20px;
-    padding-bottom: 82px;
+    padding-bottom: 81px;
 
     &::before {
       height: 91px;
